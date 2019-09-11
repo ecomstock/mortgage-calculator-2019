@@ -140,7 +140,7 @@ class App extends Component {
 
   	render() {
 		return (
-			<div className="App-header">
+			<div className="App-container">
 				<Card className="card">
 					<CardHeader classes={{"title": "card-header-title", "root": "card-header"}} title="Mortgage Calculator" />
 					<div>
