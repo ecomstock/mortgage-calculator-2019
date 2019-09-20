@@ -10,10 +10,10 @@ class App extends Component {
 		purchasePrice: "",
 		downPayment: "",
 		selectedRadio: "percent",
-		principal: "0.00",
+		principal: 0,
 		interest: "",
 		term: "",
-		payment: "0.00"
+		payment: 0
 	}
 
 	componentDidUpdate = () => {
@@ -28,7 +28,7 @@ class App extends Component {
 		const hasNewInterestState = this.hasNewInterestState();
 		const hasNewTermState = this.hasNewTermState();
 		if (hasNewPaymentState === true && (hasNewPurchasePriceState === false || hasNewInterestState === false || hasNewTermState === false)) {
-			this.setState({ payment : "0.00" })
+			this.setState({ payment : 0 })
 		}
 	}
 
@@ -46,7 +46,7 @@ class App extends Component {
 
 	setPayment () {
 		const payment = this.state.payment;
-		const calcPayment = this.calcPayment();
+		const calcPayment = +this.calcPayment();
 		const purchasePrice = this.hasNewPurchasePriceState();
 		const interest = this.hasNewInterestState();
 		const term = this.hasNewTermState();
@@ -79,7 +79,7 @@ class App extends Component {
 	}
 
 	hasNewPaymentState () {
-		if (this.state.payment === "0.00") {
+		if (this.state.payment === 0) {
 			return false;
 		} else {
 			return true;
@@ -130,11 +130,11 @@ class App extends Component {
 		this.setState({
 			purchasePrice: "",
 			downPayment: "",
-			principal: "0.00",
+			principal: 0,
 			selectedRadio: "percent",
 			interest: "",
 			term: "",
-			payment: "0.00"
+			payment: 0
 		})
 	}
 

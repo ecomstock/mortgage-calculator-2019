@@ -1,5 +1,5 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Input, InputLabel, InputAdornment } from '@material-ui/core';
 import { FormControl, FormControlLabel } from '@material-ui/core';
 import Radio from '@material-ui/core/Radio';
@@ -89,26 +89,26 @@ const Form = props => {
     </form>
   }
 
-// Form.propTypes = {
-//   purchasePrice: PropTypes.string.isRequired,
-//   handlePurchaseInput: PropTypes.func.isRequired,
-  
-//   downPayment: PropTypes.string.isRequired,
-//   handleDownPaymentInput: PropTypes.func.isRequired,
-//   selectedRadio: PropTypes.string.isRequired,
-//   handleDownPaymentRadio: PropTypes.func.isRequired,
-  
-//   principal: PropTypes.string.isRequired,
+Form.propTypes = {
+	purchasePrice: PropTypes.string.isRequired,
+	handlePurchaseInput: PropTypes.func.isRequired,
+	
+	downPayment: PropTypes.string.isRequired,
+	handleDownPaymentInput: PropTypes.func.isRequired,
+	selectedRadio: PropTypes.string.isRequired,
+	handleDownPaymentRadio: PropTypes.func.isRequired,
+	
+	principal: PropTypes.number.isRequired,
 
-//   interest: PropTypes.string.isRequired,
-//   handleInterestInput: PropTypes.func.isRequired,
+	interest: PropTypes.string.isRequired,
+	handleInterestInput: PropTypes.func.isRequired,
 
-//   term: PropTypes.string.isRequired,
-//   handleTermInput: PropTypes.func.isRequired,
+	term: PropTypes.string.isRequired,
+	handleTermInput: PropTypes.func.isRequired,
 
-//   payment: PropTypes.string.isRequired,
+	payment: PropTypes.number.isRequired,
 
-//   handleFormReset: PropTypes.func.isRequired
-// }
+	handleFormReset: PropTypes.func.isRequired
+}
 
 export default Form
